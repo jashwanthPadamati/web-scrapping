@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>
+IMDB search
+</title>
+</head>
+<body style="background-color:33B9A9">
+<center style="font-family:Trebuchet MS;">
+<h1 style="font-family:Comic Sans MS;text-decoration: underline double #000000;">IMDB FORM<h1>
+<form method="POST" action="http://127.0.0.1:5000/res">
+<div center>Language: <select style="background-color:#08F9DC;font-size:10px;"name="language" id="language" >
+    {% for o in language %}
+        <option value="{{ o.lang }}">{{ o.lang }}</option>
+    {% endfor %}
+</select></div><br>
+<div center>Genre&nbsp&nbsp&nbsp&nbsp&nbsp: <select style="background-color:#08F9DC;font-size:10px;" name="genre" id="genre">
+    {% for o in data %}
+        <option value="{{ o.gen }}">{{ o.gen }}</option>
+    {% endfor %}
+</select></div>
+<br>&nbsp&nbsp
+<input type="submit" name="Get result"><center>
+</form>
+</body>
+</html>
